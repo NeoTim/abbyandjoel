@@ -7,18 +7,24 @@
     <title>App</title>
 
     <!-- inject-vendor:css -->
+    <link rel="stylesheet" href="../../bower_components/toastr/toastr.css">
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="../../bower_components/materialize/dist/css/materialize.css">
-    <link rel="stylesheet" href="../../bower_components/toastr/toastr.css">
-    <!-- endinject -->
-
-    <!-- inject-libs:css -->
-    <link rel="stylesheet" href="../../.tmp/libs/ui-materialize.css">
     <!-- endinject -->
 
     <!-- inject:css -->
     <link rel="stylesheet" href="../../.tmp/styles/app.styl.min.css">
     <!-- endinject -->
+
+    <!-- r & r styles -->
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,100,200' rel='stylesheet' type='text/css'>
+    <link href="css/google-font-GreatVibes.css" rel="stylesheet" id="googlefont">
+    <link rel="stylesheet" type="text/css" href="lib/GammaGallery/css/style.css"/>
+    <noscript><link rel="stylesheet" type="text/css" href="lib/GammaGallery/css/noJS.css"/></noscript>
+    <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+
+    <!-- end r & -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,22 +37,21 @@
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 
   </head>
-  <body ng-controller="AppController as app" class="nav-fixed">
+  <body ng-controller="AppController as app">
 
-    <mz-flex>
-        <mz-nav class='white fixed'>
-            <div ui-view="nav"></div>
-        </mz-nav>
-        <mz-view></mz-view>
-        <mz-footer color="grey darken-3">
-            <div ui-view="footer"></div>
-        </mz-footer>
-    </mz-flex>
+    <section class="intro-header" data-ng-include="'app/core/views/intro-header.html'"></section>
+    <section class="" data-ng-include="'app/core/views/getting-married.html'"></section>
+    <section class="grey lighten-4" data-ng-include="'app/core/views/story.html'"></section>
+    <section data-ng-include="'app/core/views/album.html'"></section>
+    <section class="grey lighten-4" data-ng-include="'app/core/views/registry.html'"></section>
+    <section class="grey lighten-4" data-ng-include="'app/core/views/events.html'"></section>
+    <section class="grey lighten-4" data-ng-include="'app/core/views/reservations.html'"></section>
 
 
     <!-- inject-vendor:js -->
-    <script src="../../bower_components/angular/angular.js"></script>
     <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/toastr/toastr.js"></script>
     <script src="../../bower_components/moment/moment.js"></script>
     <script src="../../bower_components/angular-route/angular-route.js"></script>
     <script src="../../bower_components/angular-animate/angular-animate.js"></script>
@@ -62,44 +67,34 @@
     <script src="../../bower_components/showdown/compressed/extensions/prettify.min.js"></script>
     <script src="../../bower_components/showdown/compressed/extensions/table.min.js"></script>
     <script src="../../bower_components/showdown/compressed/extensions/twitter.min.js"></script>
-    <script src="../../bower_components/toastr/toastr.js"></script>
+    <script src="../../bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+    <script src="../../bower_components/jquery.serialScroll/jquery.serialScroll.js"></script>
+    <script src="../../bower_components/jquery.serialScroll/jquery.serialScroll.min.js"></script>
     <script src="../../bower_components/angular-markdown-directive/markdown.js"></script>
     <!-- endinject -->
 
-    <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+    <script src="lib/parallax.min.js"></script>
+    <script src="lib/GammaGallery/js/modernizr.custom.70736.js"></script>
+    <script src="lib/GammaGallery/js/jquery.masonry.min.js"></script>
+    <script src="lib/GammaGallery/js/jquery.history.js"></script>
+    <script src="lib/GammaGallery/js/js-url.min.js"></script>
+    <script src="lib/GammaGallery/js/jquerypp.custom.js"></script>
+    <script src="lib/GammaGallery/js/gamma.js"></script>
 
-    <!-- inject-libs:js -->
-    <script src="../../.tmp/libs/ui-materialize.js"></script>
-    <script src="../../.tmp/libs/ui-materialize.templates.js"></script>
-    <!-- endinject -->
 
     <!-- inject:js -->
     <script src="app/app.module.js"></script>
     <script src="app/core/core.module.js"></script>
     <script src="app/modules/app.modules.module.js"></script>
-    <script src="app/modules/components/components.module.js"></script>
-    <script src="app/modules/gettingStarted/gettingStarted.module.js"></script>
     <script src="app/io.js"></script>
+    <script src="app/core/api/user.api.js"></script>
     <script src="app/core/config/core.constants.js"></script>
     <script src="app/core/config/routes.config.js"></script>
-    <script src="app/core/api/user.api.js"></script>
     <script src="app/core/controllers/app.controller.js"></script>
     <script src="app/core/controllers/grid.controller.js"></script>
     <script src="app/core/controllers/home.controller.js"></script>
     <script src="app/core/services/storage.service.js"></script>
     <script src="app/core/directives/mzAnimations/mzAnimations.directive.js"></script>
-    <script src="app/modules/components/api/components.api.js"></script>
-    <script src="app/modules/components/config/components.config.js"></script>
-    <script src="app/modules/components/controllers/components.controller.js"></script>
-    <script src="app/modules/components/directives/components.directive.js"></script>
-    <script src="app/modules/components/filters/components.filter.js"></script>
-    <script src="app/modules/components/services/components.service.js"></script>
-    <script src="app/modules/gettingStarted/api/gettingStarted.api.js"></script>
-    <script src="app/modules/gettingStarted/config/gettingStarted.config.js"></script>
-    <script src="app/modules/gettingStarted/controllers/gettingStarted.controller.js"></script>
-    <script src="app/modules/gettingStarted/directives/gettingStarted.directive.js"></script>
-    <script src="app/modules/gettingStarted/filters/gettingStarted.filter.js"></script>
-    <script src="app/modules/gettingStarted/services/gettingStarted.service.js"></script>
     <script src="../../.tmp/templates/templates.js"></script>
     <!-- endinject -->
     <script>

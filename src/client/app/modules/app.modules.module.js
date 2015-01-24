@@ -3,8 +3,6 @@
 
     angular
         .module('app.modules', [
-            'gettingStarted',
-            'components'
         ]);
 
 }).call(this);

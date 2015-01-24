@@ -82,6 +82,17 @@
             // .pipe(plug.sourcemaps.write('./'))
             .pipe(gulp.dest(paths.build));
     };
+    Stage.copy = function(){
+        var js = gulp.src('./src/client/lib/**/*')
+            .pipe(gulp.dest('./build/lib'))
+        var css = gulp.src('./src/client/css/**/*')
+            .pipe(gulp.dest('./build/css'))
+        var images = gulp.src('./src/client/images/**/*')
+            .pipe(gulp.dest('./build/images'))
+
+        return merge(js, css, images);
+
+    }
 
     /**
      * Copy the Vendor JavaScript

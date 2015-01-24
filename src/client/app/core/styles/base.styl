@@ -1,50 +1,256 @@
 html, body
   // background #f5f5f5
-  background #eeeeee
+  // background #eeeeee
   width 100vw
   height 100vh
-  overflow hidden
+  // overflow hidden
 body
   scroll-vertical()
 
-main
-    height auto
+nav
+    background rgba(0,0,0,0)
+    background-color rgba(0,0,0,0)
+/*
 
-h1.title
-    font-weight 500
-    text-shadow(0 2px 2px rgba(0,0,0,.5))
-    strong
-        font-weight 100
-h3.intro-text
-    font-weight 100
-    text-shadow(0 2px 2px rgba(0,0,0,.5))
-    strong
-        font-weight 700
+Table of content:
 
-.brand-logo
-  text-shadow(0 2px 4px rgba(0,0,0,.1))
+body
+nav
+intro
+different sections
+button
+form
+custom responsive code
 
-.intro-devices
-    margin 0 auto
-    width 400px
-    padding 20px
-    border-radius(10px)
+*/
 
 
-    .intro-device-inner
-        background white
-        min-height 100%
-        width 100%
+body {
+    font-family: 'Raleway', sans-serif;
+    color:#34495E;
+    font-size: 15px;
+    /* line-height: 23px; */
+    background:url(../images/bg/geometry_1.png);
+    animation: animatedBackground 100s linear infinite;
+}
 
-    .intro-block
-        height 50px
-        box-shadow(0 2px 4px rgba(0,0,0,.3))
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
+.title{
+    font-family:'Great Vibes',Sans-Serif;
+}
+
+.ffno{
+    font-family:'Great Vibes',Sans-Serif;
+}
+
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+
+#nav{
+    list-style: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 20;
+}
+
+#nav li{
+    margin: 0 0 15px 0;
+}
+
+#nav li a{
+    background: url(../images/dot.png);
+    display: block;
+    height: 19px;
+    width: 19px;
+    border:2px solid #34495E;
+    border-radius:100%;
+}
+
+#nav li a:hover{
+    position: relative;
+}
+
+#nav li a[title]:hover:before {
+  content: attr(title);
+  padding: 4px 8px;
+  color: #FFF;
+  position: absolute;
+  right: 30px;
+  top: -3px;
+  white-space: nowrap;
+  z-index: 20;
+  background:#34495E;
+}
+
+#nav li.current a{
+  background: #34495E;
+}
+
+.prog
+    h2
+        font-family: 'Raleway', sans-serif
+        font-size 1.6rem
+        font-weight bold
+        box-sizing content-box
+        &::before,
+        &::after
+            box-sizing none
+
+
+p {
+    margin: 0 0 23px 0;
+    line-height: 23px;
+}
+
+.title{
+    font-size: 60px;
+    // text-align:center;
+    // padding-bottom: 15px;
+    // transition: all 2s ease 0s;
+}
+
+.subtitle
+    text-align center
+
+.randr{
+    position:relative;
+    top:400px;
+    font-size:110px;
+    text-shadow: 0px 1px 1px #29183A;
+    // color:#34495E!important;
+    color:white;
+    margin-left: 30px;
+}
+
+.title-animate{
+    transform: translateY(0px);
+    letter-spacing:0px;
+}
+
+.section{
+    padding:150px 0 0 0;
+    width:50%;
+}
+
+.section3{
+    padding:150px 0 0 0;
+    width:75%;
+}
+
+
+.party p{
+    padding:30px 0 0 0;
+}
+
+.party img{
+    width:100%;
+}
+
+
+.program img{
+    border-radius:100%;
+}
+
+.ffno{
+    font-size: 28px;
+}
+
+.button-link {
+    border: 0 none;
+    color: #FFFFFF;
+    display: inline-block;
+    height: 60px;
+    padding-top: 20px;
+    transition: all 0.3s ease 0s;
+    width: 220px;
+    margin-bottom: 5px;
+
+    transform: translateY(75px);
+    transition: all 2s ease 0s;
+}
+
+.button-link:hover {
+    color: #FFFFFF;
+    text-decoration:none;
+    opacity:.8;
+}
+
+.button-link:focus {
+    color: #FFFFFF;
+    text-decoration:none;
+    opacity:.8;
+}
+
+.button-animate{
+    transform: translateY(0px);
+}
+
+
+.fld {
+    width: 75%;
+    color:#A9A9A9;
+    height: 60px;
+    transition: all 0.3s ease 0s;
+    margin-bottom:5px;
+    padding-left:5px;
+}
+
+.submit_fld  {
+    width: 75%;
+    border: 0 none;
+    color: #FFFFFF;
+    height: 60px;
+    border-radius:0px;
+    transition: all 0.3s ease 0s;
+}
+
+.submit_fld:hover {
+    color: #FFFFFF;
+    text-decoration:none;
+    opacity:.8;
+}
+
+
+.bottom{
+    background:url(../images/bottom.jpg) 0 bottom no-repeat;
+    height: 800px;
+    margin: 150px auto 0;
+    padding: 0;
+    background-size:cover;
+}
+
+.thankyou{
+    color:#fff!important;
+    position: absolute;
+    bottom: 1%;
+    right:1%;
+}
+
+
+.responsive-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+
+.responsive-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 
 
+@media (max-width: 768px) {
 
-code
-  border-radius(5px)
-  background-color lightgrey
+    .section, .section2, .section3{
+        width:100%;
+    }
 
+    .widescreen{
+        display:none;
+    }
+}
 
+@media (max-width: 600px) {
+    .randr{
+        top:200px;
+        font-size:80px
+    }
+}

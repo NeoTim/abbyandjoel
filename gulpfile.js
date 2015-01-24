@@ -147,13 +147,14 @@ gulp
     .task('stage',
         plug.sequence(
             'clean',
-            'stage:libs',
+            'stage:copy',
             'stage:scripts',
             'stage:styles',
             'stage:inject',
             'stage:assets',
             'stage:notify'
         ))
+    .task('stage:copy',   stage.copy)
     .task('stage:scripts', ['scripts'])
     .task('stage:styles',  ['styles'])
     .task('stage:assets',  ['assets'])

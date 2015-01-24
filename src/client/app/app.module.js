@@ -7,8 +7,6 @@
             'ngSanitize',
             'ui.router',
             'btford.markdown',
-            'hljs',
-            'ui.materialize',
             'core',
             'app.modules'
         ]);

@@ -1,0 +1,78 @@
+
+.title{
+	color:#34495E;
+}
+
+.ffno{
+	color:#34495E;
+}
+
+.button-link {
+    background: none repeat scroll 0 0 #34495E;
+}
+
+.fld {
+    border: 1px solid #34495E;
+}
+
+.submit_fld  {   
+	background: none repeat scroll 0 0 #34495E;
+}
+
+.program img{
+	background: none repeat scroll 0 0 #34495E;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:first-child{
+	color:#34495E;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:last-child{
+	color:#34495E;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon{
+	background:#34495E;
+}
+
+.cbp_tmtimeline > li:nth-child(2n+1) .cbp_tmlabel:after{
+	border-right-color: #34495E;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel:after{
+	border-color: rgba(0, 0, 0, 0) #3f5872 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+.cbp_tmtimeline > li:nth-child(2n+1) .cbp_tmlabel{
+	background:#34495E;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel{
+	background:#3f5872;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon{
+	box-shadow: 0 0 0 8px #3f5872;
+}
+
+.cbp_tmtimeline:before{
+	background:#3f5872;
+}
+
+@media screen and (max-width: 47.2em) {
+
+	.cbp_tmtimeline > li .cbp_tmlabel:after {
+		right: auto;
+		left: 20px;
+		border-right-color: transparent;
+		border-bottom-color: #3f5872;
+		top: -20px;
+	}
+
+	.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+		border-right-color: transparent;
+		border-bottom-color: #3f5872;
+	}
+
+}
+	
