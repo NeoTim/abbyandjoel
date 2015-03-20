@@ -1,0 +1,33 @@
+<template>
+    <import from="./system/ai-toolbar"></import>
+    <import from="./system/a-interface"></import>
+    <import from="./system/ai-footer"></import>
+    <import from="./system/ai-aside-nav"></import>
+    <import from="./system/ai-main"></import>
+    <import from="./system/ai-body"></import>
+    <import from="./nav-bar"></import>
+    <import from="./site-header"></import>
+
+
+    <a-interface
+                direction="interface.direction"
+                router.bind="router"
+                aside.bind="aside"
+                toolbar.bind="toolbar">
+
+
+      <ai-body direction.bind="interface.direction">
+        <site-header></site-header>
+        <div class="header-block"></div>
+        <ai-main>
+          <router-view></router-view>
+
+        </ai-main>
+
+        <!-- <ai-footer></ai-footer> -->
+
+      </ai-body>
+
+    </a-interface>
+
+</template>

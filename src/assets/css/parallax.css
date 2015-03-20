@@ -1,0 +1,60 @@
+.ourstory{
+	/* background-color: rgba(255,155,131,0.7); */
+	background-color: rgba(255,255,255,0.8);
+	
+}
+
+.bg{
+	background:url(../images/bg.jpg) 50% 0 no-repeat fixed;
+	
+	margin: 150px auto 0;
+	padding: 0;
+	background-size:cover;
+}
+
+.accomodations{
+	background-color: rgba(255,255,255,0.8);
+	
+}
+
+.bg2{
+	background:url(../images/bg2.jpg) 50% 0 no-repeat fixed;
+	
+	margin: 150px auto 0;
+	padding: 0;
+	background-size:cover;
+}
+
+.funfact{
+	background-color: rgba(255,255,255,0.8);
+	
+}
+
+.bg3{
+	background:url(../images/bg3.jpg) 50% 0 no-repeat fixed;
+	
+	margin: 150px auto 0;
+	padding: 0;
+	background-size:cover;
+}
+
+.prog{
+	background-color: rgba(255,255,255,0.8);
+	
+}
+
+.bg4{
+	background:url(../images/bg4.jpg) 50% 0 no-repeat fixed;
+	
+	margin: 150px auto 0;
+	padding: 0;
+	background-size:cover;
+}
+
+.section-p{
+	padding:80px;
+}
+	
+.section-p .title,	.section-p p{
+	//color:#fff;
+}

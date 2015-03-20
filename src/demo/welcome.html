@@ -1,0 +1,84 @@
+<template>
+  <import from="./system/ai-card"></import>
+  <import from="./img-gallery"></import>
+  <import from="./site-events"></import>
+  <import from="./site-registry"></import>
+  <import from="./site-reservations"></import>
+  <import from="./nav-btn"></import>
+  <div class="section" id="second">
+    <div class="container">
+        <div class="row center">
+            <nav-btn icon="fa-bars" next="fa-chevron-right fa-rotate-90">
+            </nav-btn>
+            <div class="subtitle title text-red text-lighten-2">
+                We're Getting Married
+            </div>
+            <h4 class="light text-grey">May 1, 2015</h4>
+
+        </div>
+    </div>
+  </div>
+  <div class="section" id="second">
+    <div class="container">
+        <div class="row center">
+            <div class="subtitle title text-red text-lighten-2">
+                Photos
+            </div>
+
+            <div id="flex md12">
+
+              <img-gallery></img-gallery>
+
+              <div class="gamma-overlay"></div>
+
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="section" id="second">
+    <div class="container">
+        <div class="row center">
+            <div class="subtitle title text-red text-lighten-2">
+                Our Registry
+            </div>
+
+            <div id="flex md12">
+
+              <site-registry></site-registry>
+
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="section" id="second">
+    <div class="container">
+        <div class="row center">
+            <div id="flex md12">
+              <div class="prog">
+                  <div class="section-p program">
+
+                    <site-events></site-events>
+                  </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="section" id="second">
+    <div class="container">
+        <div class="row center">
+            <div class="subtitle title text-red text-lighten-2">
+                The Brooks at Weatherford
+            </div>
+
+            <div id="flex md12">
+
+              <site-reservations></site-reservations>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+</template>
