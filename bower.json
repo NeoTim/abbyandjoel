@@ -1,0 +1,16 @@
+{
+  "name": "html5-template",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "jquery": "~2.1.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
